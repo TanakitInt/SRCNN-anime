@@ -1,0 +1,5 @@
+.vscode
+__pycache__
+h5-dataset/train.h5
+h5-dataset/test.h5
+
