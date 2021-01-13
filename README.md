@@ -2,6 +2,8 @@
 
 #### A Modified Super-Resolution Convolutional Neural Network (SRCNN) build for artwork, anime and illustration.
 
+![Dev Banner](sample/Icon/SRCNN-anime_Banner.png) 
+
 #### For references and details please scroll down
 
 A 4th year Senior Project Github repository for  
@@ -49,7 +51,7 @@ For more detailed diagram, [Click here](Diagram/Code-diagram)
 More Results from experiment  
 [Click here for more experiment samples](sample/Testing-set)
 
-### Sample for Win and Lose case
+### Sample Comparison for Win and Lose case with waifu2x
 ![win](sample/Sample-2.PNG)
 ![lose](sample/Sample-1.PNG)
 
@@ -77,8 +79,10 @@ Image acquired from [Anime Cosplay and Boardgame Club](https://www.facebook.com/
 
 ## Train your own model  
 
-### Input Output Comparisons
-[Click here for more Input Output comparisons](sample/Real-world-sample/1)
+### Input Output Comparisons  
+
+[Click here for more Input Output comparisons](sample/Real-world-sample/1)  
+
 ![InOut Compare](sample/Sample-5.PNG)
 
 ### Download prepared datasets and pre-trained weights (.h5 files)  
@@ -121,8 +125,9 @@ Make sure it's same resolution as output.
 ### ADDITIONAL FEATURE
 
 ### Feature Comparisons
+
 [Click here for more Feature comparison](sample/Feature-compare)
-![Feature Compare](sample/Sample-6.PNG)
+![Feature Compare](sample/Sample-6.PNG)  
 
 #### **Settings**
 See `` Diagram/Code-diagram `` for usage.
@@ -252,14 +257,18 @@ Nico-illust : https://nico-opendata.jp/en/seigadata/index.html
 Reddit Anime Wallpaper : https://www.reddit.com/r/Animewallpaper  
 Minimalist Anime Wallpaper (Ours): https://www.deviantart.com/tanakitint  
 Genshin Impact Screenshots (Ours capture) : https://genshin.mihoyo.com/en  
-### Possible Future Works
+
+### Possible Future Works  
+
 - Change all Training and Testing image to PNG
 - In the Data Preprocessing process, Change enlargement method from Bilinear to Bicubic
 - Develop and Deploy Web Application **(Confirmed : Schedule on Mid 2021)**
 - Modify the Model architecture
 
-### Current Issue on some Input Image (Depends)
-- Model can't keep PNG transparency
+### Current Issue on some Input Image (Depends)  
+
+- Model can't keep PNG transparency  
+
 ![Issue 1](sample/Sample-7.PNG)
 ![Issue 1](sample/Sample-8.PNG)
 
@@ -274,13 +283,22 @@ https://www.udemy.com/course/machine-learning-for-absolute-beginners/
 https://medium.com/datadriveninvestor/using-the-super-resolution-convolutional-neural-network-for-image-restoration-ff1e8420d846
 
 ### Github Repository References
+
+waifu2x :  
+https://github.com/nagadomi/waifu2x  
+
+Code :  
 https://github.com/MarkPrecursor/SRCNN-keras  
 https://github.com/rezaeiii/SRCNN  
 https://github.com/Maximellerbach/Image-Processing-using-AI  
 https://github.com/tegg89/SRCNN-Tensorflow  
 
-### Footnote for copyright claims and commerial :  
-All Anime image was acquired from Internet since it's not for commerial use, "[Fair use](https://en.wikipedia.org/wiki/Fair_use)" applied.  
+### Footnote for copyright claims and commerial :
+
+<img src="sample/Icon/SRCNN-anime_Logo_Circle_Transprant.png" width="200">  
+
+**SRCNN-anime Project Icon and Banner was made by this GitHub owner so do not use as your own project/work, copyrighted work.**  
+All Anime image was acquired from Internet since it's not for commerial use, "[**Fair use**](https://en.wikipedia.org/wiki/Fair_use)" applied.  
 We're not work on any commerial product.  
-This is our educational research, So I will not have any commerial stuff (I don't know how to make into commerial product at all!).  
+This is our educational research, So I will not have any commerial stuff (I don't know how to make into commerial product at all!)  
 
