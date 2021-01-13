@@ -1,37 +1,95 @@
 # SRCNN-anime
 
-#### A Super-Resolution Convolutional Neural Network build for artwork, anime and illustration.
+#### A Modified Super-Resolution Convolutional Neural Network (SRCNN) build for artwork, anime and illustration.
 
 #### For references and details please scroll down
 
-A 4th year project Github repository for  
+A 4th year Senior Project Github repository for  
 "Artwork Enlargement and Quality Improvement using Machine Learning"
 
-Image Processing and Deep Learning Lab (IPDL Lab)
+<img src="sample/Icon/IPDL_Icon_2021_Black.png" width="500">  
+
+[Image Processing and Deep Learning Laboratory (IPDL Lab)](http://prip.it.kmitl.ac.th/)  
 Faculty of Information Technology, King Mongkut's Institute of Technology Ladkrabang  
-http://prip.it.kmitl.ac.th/
 
 Tanakit Intaniyom - [TanakitInt](https://github.com/TanakitInt)   
-Warinthorn Thananporn - [TIVOLI777](https://github.com/TIVOLI777)
+Warinthorn Thananporn - [TIVOLI777](https://github.com/TIVOLI777)  
 
 Professor :  
 Asst. Prof. Dr. Kuntpong Woraratpanya
 
-Duration : 11 February 2020 - 14 January 2021 (11 months)
+Duration : 11 February 2020 - 14 January 2021 (11 months)  
 
-## Sample output  
+Public Release date : 14 January 2021  
 
---- Coming soon ---
+<img src="sample/Icon/Luna_Logo_Package_Black_cropped.png" width="500">  
 
-## Download prepared datasets and pre-trained weights (.h5 files)  
+Special thanks for Sample images :  
+[Anime Cosplay and Boardgame Club](https://www.facebook.com/AniBoardIT)  
+ 
+## I'm interested in this project!
+
+If you interested in this project, feel free to contact me at [Email at my GitHub Profile](https://github.com/TanakitInt/) or [Twitter](https://twitter.com/TanakitInt)  
+For any education purposes, you can directly use my [GitHub repository name](https://github.com/TanakitInt/SRCNN-anime) as reference.  
+For any other purposes, such as commercial product, please contact me before using any of this project.  
+
+## Issue(s), Bug(s) report, etc...
+
+We welcome you to report any bug(s) or issue(s).  
+We're appreciated in your finding! 
+You can directly raise the issue(s) in this GitHub repository or contact me at [Email at my GitHub Profile](https://github.com/TanakitInt/) or [Twitter](https://twitter.com/TanakitInt) 
+
+## Simple Diagram  
+For more detailed diagram, [Click here](Diagram/Code-diagram) 
+
+<img src="Diagram/Simple.png" width="600">
+
+## Sample Output  
+
+More Results from experiment  
+[Click here for more experiment samples](sample/Testing-set)
+
+### Sample for Win and Lose case
+![win](sample/Sample-2.PNG)
+![lose](sample/Sample-1.PNG)
+
+### Zoom In
+![zoom 1](sample/Sample-4.PNG)
+![zoom 2](sample/Sample-3.PNG)
+
+### Real world example (Default Settings)
+Image acquired from [Anime Cosplay and Boardgame Club](https://www.facebook.com/AniBoardIT) 2014 Logo Competition  
+[Click here for more real world samples](sample/Real-world-sample)
+
+(c) 2014 Yokkass Kongpueng, ABOARD Club ITKMITL  
+#### Input  
+<img src="sample/Real-world-sample/2/Aboard_club_logo_competition_2014_3.jpg" width="400">
+
+#### Output   
+<img src="sample/Real-world-sample/2/aboard_club_logo_competition_2014_3.jpg_srcnn-anime-bicubic-2.0x-enhanced-denoised.png" width="800">
+
+(c) 2014 Sathika RuikaLism Lim, ABOARD Club ITKMITL  
+#### Input  
+<img src="sample/Real-world-sample/3/Aboard_club_logo_competition_2014_8.jpg" width="400">
+
+#### Output  
+<img src="sample/Real-world-sample/3/aboard_club_logo_competition_2014_8.jpg_srcnn-anime-bicubic-2.0x-enhanced-denoised.png" width="800">
+
+## Train your own model  
+
+### Input Output Comparisons
+[Click here for more Input Output comparisons](sample/Real-world-sample/1)
+![InOut Compare](sample/Sample-5.PNG)
+
+### Download prepared datasets and pre-trained weights (.h5 files)  
 https://drive.google.com/drive/folders/1m27aL3ZZsIlG3ahuZnMsubPYNa2QdfUH?usp=sharing  
 
 ### INSTALL PYTHON PACKAGE
 `` 0_PYHON_3_PACKAGE_INSTALL.bat ``
 
 ### PREPARE DATA  
-**Input your own data in dataset folder ``dataset/original/`` (Training set) and ``dataset/test/`` (Testing set) first!  
-(Split train-test as your own wish)**  
+**Input your own data in dataset folder ``dataset/original/`` (Training set) and ``dataset/test/`` (Testing set) first!**   
+(Split train-test as your own wish, Recommended : 80/20)  
 
 #### **Prepare data quick start**  
 `` 1_PREPARE_DATA_QUICK_START.bat ``  
@@ -62,8 +120,12 @@ Make sure it's same resolution as output.
 
 ### ADDITIONAL FEATURE
 
+### Feature Comparisons
+[Click here for more Feature comparison](sample/Feature-compare)
+![Feature Compare](sample/Sample-6.PNG)
+
 #### **Settings**
-See `` Diagram/Code Diagram `` for usage.
+See `` Diagram/Code-diagram `` for usage.
 Please set the settings at `` settings/ ``
 
 `` settings_2-passes.txt ``   
@@ -112,6 +174,9 @@ For updown input, 0 or 1. Default 1.
 `` 31_UPDOWN_EXPRESS.bat `` For Express mode 
 
 #### **Manual Reference tests**  
+
+![InOut Compare](sample/Manual-reference-test/manual-reference-test.png)
+
 Go to `` util/ref-test/ ``  
 A folder `` in-test/ `` is for input image, the folder will contain a folder `` 1-ref/ ``, `` 2 ``, `` 3 ``, `` 4 ``.  
 Place each "PNG" image in each folder, the image in `` 1-ref/ `` will be a reference for example,  
@@ -119,10 +184,12 @@ Place each "PNG" image in each folder, the image in `` 1-ref/ `` will be a refer
 `` in-test/2/image.png_srcnn-anime-bicubic-2.0x-enhanced.png ``  
 `` in-test/3/image.png_srcnn-anime-bicubic-2.0x-enhanced-denoised.png ``  
 `` in-test/4/image.png_srcnn-anime_2-PASSES_2.0x-enhanced-denoised.png ``   
-  
 Then run a fie `` ref-test.py `` the figure output will be at `` out-fig/ ``  
 
 Please note that manual reference test must contain all 4 any same resolution images.
+
+### Average Table Results from all Training Datasets  
+![avg-table](sample/IQA-AVG.jpg)
 
 ### Hardware, Software and Limitation
 Training Time : 14 Day  
@@ -167,11 +234,11 @@ h5py==2.10.0
 GPUtil==1.4.0  
 pydotplus==2.0.2  
 
- - Limitation on our hardware setup  
+ - Limitation on our hardware setup (For real training)  
 **1 Pass** input image (1750 x 1750)  
 **2 Passes** input image (1750 x 1750)  
 **UPDOWN-2x** input image (875 x 875)  
-**Environment Limit** Image (3500 x 3500)  
+**Enhancement only** input image (3500 x 3500)  
 
 We recommended to run python in Anaconda virtual environment so it can be create and delete right away. Easy to manage python installation package.
 
@@ -182,9 +249,19 @@ Anime Faces 2 : https://www.kaggle.com/dmcgow/animation/
 Anime Faces 3 : https://github.com/bchao1/Anime-Face-Dataset  
 Manga 109 : http://www.manga109.org/en/  
 Nico-illust : https://nico-opendata.jp/en/seigadata/index.html  
-Anime Wallpaper (Reddit) : https://www.reddit.com/r/Animewallpaper  
+Reddit Anime Wallpaper : https://www.reddit.com/r/Animewallpaper  
 Minimalist Anime Wallpaper (Ours): https://www.deviantart.com/tanakitint  
 Genshin Impact Screenshots (Ours capture) : https://genshin.mihoyo.com/en  
+### Possible Future Works
+- Change all Training and Testing image to PNG
+- In the Data Preprocessing process, Change enlargement method from Bilinear to Bicubic
+- Develop and Deploy Web Application **(Confirmed : Schedule on Mid 2021)**
+- Modify the Model architecture
+
+### Current Issue on some Input Image (Depends)
+- Model can't keep PNG transparency
+![Issue 1](sample/Sample-7.PNG)
+![Issue 1](sample/Sample-8.PNG)
 
 ### Project References
 
@@ -201,4 +278,9 @@ https://github.com/MarkPrecursor/SRCNN-keras
 https://github.com/rezaeiii/SRCNN  
 https://github.com/Maximellerbach/Image-Processing-using-AI  
 https://github.com/tegg89/SRCNN-Tensorflow  
+
+### Footnote for copyright claims and commerial :  
+All Anime image was acquired from Internet since it's not for commerial use, "[Fair use](https://en.wikipedia.org/wiki/Fair_use)" applied.  
+We're not work on any commerial product.  
+This is our educational research, So I will not have any commerial stuff (I don't know how to make into commerial product at all!).  
 

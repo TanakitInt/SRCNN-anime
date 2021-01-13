@@ -1,2 +1,0 @@
-Denoise outputs go here.
-

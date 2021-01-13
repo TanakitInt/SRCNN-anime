@@ -1,1 +1,0 @@
-"manual-reference-test.png" goes here
