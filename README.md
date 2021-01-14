@@ -131,6 +131,7 @@ Make sure it's same resolution as output.
 ### Feature Comparisons  
 
 [Click here for more Feature comparison](sample/Feature-compare)
+
 ![Feature Compare](sample/Sample-6.PNG)  
 
 #### **Settings**
