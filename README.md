@@ -29,7 +29,11 @@ Public Release date : 14 January 2021
 Special thanks for Sample images :  
 [Anime Cosplay and Boardgame Club](https://www.facebook.com/AniBoardIT)  
  
-## I'm interested in this project!
+## I'm interested in this project!  
+
+<img src="sample/Giyuu-Me-No-friend-computer-Meme.png" width="500"> 
+
+#### Buy me a coffee! ☕ (Thank you very much!) [Paypal](https://www.paypal.me/TanakitInt)
 
 If you interested in this project, feel free to contact me at [Email at my GitHub Profile](https://github.com/TanakitInt/) or [Twitter](https://twitter.com/TanakitInt)  
 For any education purposes, you can directly use my [GitHub repository name](https://github.com/TanakitInt/SRCNN-anime) as reference.  
@@ -65,17 +69,17 @@ Image acquired from [Anime Cosplay and Boardgame Club](https://www.facebook.com/
 
 (c) 2014 Yokkass Kongpueng, ABOARD Club ITKMITL  
 #### Input  
-<img src="sample/Real-world-sample/2/Aboard_club_logo_competition_2014_3.jpg" width="400">
+<img src="sample/Real-world-sample/2/Aboard_club_logo_competition_2014_3.jpg" width="50%">
 
 #### Output   
-<img src="sample/Real-world-sample/2/aboard_club_logo_competition_2014_3.jpg_srcnn-anime-bicubic-2.0x-enhanced-denoised.png" width="800">
+<img src="sample/Real-world-sample/2/aboard_club_logo_competition_2014_3.jpg_srcnn-anime-bicubic-2.0x-enhanced-denoised.png" width="100%">
 
 (c) 2014 Sathika RuikaLism Lim, ABOARD Club ITKMITL  
 #### Input  
-<img src="sample/Real-world-sample/3/Aboard_club_logo_competition_2014_8.jpg" width="400">
+<img src="sample/Real-world-sample/3/Aboard_club_logo_competition_2014_8.jpg" width="50%">
 
 #### Output  
-<img src="sample/Real-world-sample/3/aboard_club_logo_competition_2014_8.jpg_srcnn-anime-bicubic-2.0x-enhanced-denoised.png" width="800">
+<img src="sample/Real-world-sample/3/aboard_club_logo_competition_2014_8.jpg_srcnn-anime-bicubic-2.0x-enhanced-denoised.png" width="100%">
 
 ## Train your own model  
 
@@ -124,7 +128,7 @@ Make sure it's same resolution as output.
 
 ### ADDITIONAL FEATURE
 
-### Feature Comparisons
+### Feature Comparisons  
 
 [Click here for more Feature comparison](sample/Feature-compare)
 ![Feature Compare](sample/Sample-6.PNG)  
@@ -284,10 +288,11 @@ https://medium.com/datadriveninvestor/using-the-super-resolution-convolutional-n
 
 ### Github Repository References
 
-waifu2x :  
+- waifu2x    
 https://github.com/nagadomi/waifu2x  
+https://github.com/lltcggie/waifu2x-caffe  
 
-Code :  
+- Code   
 https://github.com/MarkPrecursor/SRCNN-keras  
 https://github.com/rezaeiii/SRCNN  
 https://github.com/Maximellerbach/Image-Processing-using-AI  
@@ -299,6 +304,6 @@ https://github.com/tegg89/SRCNN-Tensorflow
 
 **SRCNN-anime Project Icon and Banner was made by this GitHub owner so do not use as your own project/work, copyrighted work.**  
 All Anime image was acquired from Internet since it's not for commerial use, "[**Fair use**](https://en.wikipedia.org/wiki/Fair_use)" applied.  
-We're not work on any commerial product.  
-This is our educational research, So I will not have any commerial stuff (I don't know how to make into commerial product at all!)  
+We're not working on any commerial product.  
+This is our educational research, So I will not have any commerial stuff. (I don't know how to make into commerial product at all!)  
 
