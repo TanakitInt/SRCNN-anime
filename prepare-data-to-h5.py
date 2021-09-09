@@ -11,7 +11,7 @@ import numpy
 DATA_PATH = "dataset/original-sharpened/"
 TEST_PATH = "dataset/test-sharpened/"
 
-Random_Crop = 100
+Random_Crop = 1000
 Patch_size = 32
 label_size = 32
 conv_side = 0
@@ -34,8 +34,9 @@ def prepare_data(_path):
         hr_img = hr_img[:, :, 0]
 
         # two resize operation to produce training data and labels
-        lr_img = cv2.resize(hr_img, (int(shape[1] / scale), int(shape[0] / scale)))
-        lr_img = cv2.resize(lr_img, (shape[1], shape[0]))
+        lr_img = cv2.resize(hr_img, (int(shape[1] / scale), int(shape[0] / scale)), interpolation=cv2.INTER_LINEAR)
+        lr_img = cv2.resize(lr_img, (shape[1], shape[0]), interpolation=cv2.INTER_LINEAR) # up bilinear
+        #lr_img = cv2.resize(lr_img, (shape[1], shape[0]), interpolation=cv2.INTER_CUBIC) # up bicubic
 
         # produce Random_Crop random coordinate to crop training img
         Points_x = numpy.random.randint(0, min(shape[0], shape[1]) - Patch_size, Random_Crop)
@@ -81,8 +82,9 @@ def prepare_crop_data(_path):
         new_width = w / scale
 
         # two resize operation to produce training data and labels
-        lr_img = cv2.resize(hr_img, (int(new_width), int(new_height)))
-        lr_img = cv2.resize(lr_img, (w, h))
+        lr_img = cv2.resize(hr_img, (int(new_width), int(new_height)), interpolation=cv2.INTER_LINEAR)
+        lr_img = cv2.resize(lr_img, (w, h), interpolation=cv2.INTER_LINEAR) # up bilinear
+        #lr_img = cv2.resize(lr_img, (w, h), interpolation=cv2.INTER_CUBIC) # up bicubic
         width_num = (shape[0] - (BLOCK_SIZE - BLOCK_STEP) * 2) / BLOCK_STEP
         height_num = (shape[1] - (BLOCK_SIZE - BLOCK_STEP) * 2) / BLOCK_STEP
         for k in range(int(width_num)):

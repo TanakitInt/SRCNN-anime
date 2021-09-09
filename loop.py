@@ -40,8 +40,13 @@ def main():
 
 def interpol(file, model):
 
-    DOWNSCALE = 0.5
-    UPSCALE = 2
+    #DOWNSCALE = 0.5 # 2x
+    #DOWNSCALE = 0.3333 # 3x
+    DOWNSCALE = 0.25 # 4x
+
+    #UPSCALE = 2 # 2x
+    #UPSCALE = 3 # 3x
+    UPSCALE = 4 # 4x
 
     INPUT_NAME = file
     OUTPUT_NAME = "output/" + str(file)[6:-4]
@@ -102,6 +107,7 @@ def IQA():
     f_w = sorted([str(x) for x in folder_waifu2x])
 
     # Integrity Check
+    #intcheck = [len(f_r), len(f_nn), len(f_bl), len(f_bc), len(f_srcnn)]
     intcheck = [len(f_r), len(f_nn), len(f_bl), len(f_bc), len(f_srcnn), len(f_w)]
     print("Integrity Check: ", intcheck)
     total = max(intcheck)
@@ -143,12 +149,15 @@ def IQA():
         srs = sr.shape
         waifu2xs = waifu2x.shape
         print("Size Check:", [refs, nns, bls, bcs, srs, waifu2xs])
+        #print("Size Check:", [refs, nns, bls, bcs, srs])
 
         # file size detection and Automatic fix with nearest neighbors methods
         if refs != nns or refs != bls or refs != bcs or refs != srs or refs != waifu2xs:
+        #if refs != nns or refs != bls or refs != bcs or refs != srs:
             print("Size error detected. Automatic fix with nearest neighbors method.")
 
             base = min(refs, nns, bls, bcs, srs, waifu2xs)
+            #base = min(refs, nns, bls, bcs, srs)
             print("Applying base size:", base)
             ref = cv2.resize(ref, dsize=(base[1], base[0]), interpolation = cv2.INTER_NEAREST)
             nn = cv2.resize(nn, dsize=(base[1], base[0]), interpolation = cv2.INTER_NEAREST)
@@ -168,6 +177,7 @@ def IQA():
         # display images as subplots --- 
         # Reference
         fig, axs = plt.subplots(1, 6, figsize=(48, 8))
+        #fig, axs = plt.subplots(1, 5, figsize=(40, 8))
         axs[0].imshow(cv2.cvtColor(ref, cv2.COLOR_BGR2RGB))
         axs[0].set_title('Reference')
 

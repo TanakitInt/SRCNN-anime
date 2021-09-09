@@ -25,7 +25,7 @@ def prepare_images(path, FACTOR):
         img = cv2.resize(img, (new_width, new_height), interpolation = cv2.INTER_LINEAR)
 
         # resize the image - up
-        img = cv2.resize(img, (w, h), interpolation = cv2.INTER_LINEAR)
+        img = cv2.resize(img, (w, h), interpolation = cv2.INTER_CUBIC)
 
         # save the image
         print("Saving {}".format(file))

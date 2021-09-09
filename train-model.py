@@ -12,7 +12,7 @@ print("Keras version : " + keras.__version__)
 # import model packages
 
 from keras.models import Sequential
-from keras.layers import Conv2D, Conv2DTranspose, Input, Activation, UpSampling2D
+from keras.layers import Conv2D, Conv2DTranspose, Input, Activation, UpSampling2D, LeakyReLU
 from keras.optimizers import SGD, Adam
 from keras.callbacks import ModelCheckpoint
 import numpy as np
@@ -32,40 +32,60 @@ from matplotlib import pyplot as plt
 # define the SRCNN model
 def model():
     
+    #=============================== Modified SRCNN ===============================#
+
     # define model type
     SRCNN = Sequential()
     
     # add model layers
     SRCNN.add(Conv2D(filters=64, kernel_size = (5, 5), strides=(1,1), kernel_initializer='glorot_uniform',
                      padding='same', use_bias=True, input_shape=(None, None, 1)))
-    SRCNN.add(Activation("relu"))
+    SRCNN.add(LeakyReLU(alpha=0.1))
     SRCNN.add(Conv2D(filters=64, kernel_size = (5, 5), strides=(1,1), kernel_initializer='glorot_uniform',
                      padding='same', use_bias=True))
-    SRCNN.add(Activation("relu"))
+    SRCNN.add(LeakyReLU(alpha=0.1))
     SRCNN.add(Conv2D(filters=16, kernel_size = (3, 3), strides=(1,1), kernel_initializer='glorot_uniform',
                      padding='same', use_bias=True))
-    SRCNN.add(Activation("relu"))
+    SRCNN.add(LeakyReLU(alpha=0.1))
     
     SRCNN.add(Conv2DTranspose(filters=32, kernel_size = (3, 3), strides=(1,1), kernel_initializer='glorot_uniform',
                      padding='same', use_bias=True))
-    SRCNN.add(Activation("relu"))
+    SRCNN.add(LeakyReLU(alpha=0.1))
 
     #SRCNN.add(UpSampling2D(size=(2,2), data_format=None, interpolation='bilinear'))
 
     SRCNN.add(Conv2DTranspose(filters=32, kernel_size = (3, 3), strides=(1,1), kernel_initializer='glorot_uniform',
                      padding='same', use_bias=True))
-    SRCNN.add(Activation("relu"))    
+    SRCNN.add(LeakyReLU(alpha=0.1))    
     SRCNN.add(Conv2D(filters=3, kernel_size = (1, 1), strides=(1,1), kernel_initializer='glorot_uniform',
                      padding='same', use_bias=True))
     SRCNN.add(Activation("sigmoid"))
 
-    #model = SRCNN
+    #=============================== Original SRCNN ===============================#
+
+    # # define model type
+    # SRCNN = Sequential()
+    
+    # # add model layers
+    # SRCNN.add(Conv2D(filters=128, kernel_size = (9, 9), strides=(1,1), kernel_initializer='glorot_uniform',
+    #                  padding='same', use_bias=True, input_shape=(None, None, 1)))
+    # SRCNN.add(LeakyReLU(alpha=0.1))
+    # SRCNN.add(Conv2D(filters=64, kernel_size = (3, 3), strides=(1,1), kernel_initializer='glorot_uniform',
+    #                  padding='same', use_bias=True))
+    # SRCNN.add(LeakyReLU(alpha=0.1))
+    # SRCNN.add(Conv2D(filters=1, kernel_size = (5, 5), strides=(1,1), kernel_initializer='glorot_uniform',
+    #                  padding='same', use_bias=True))
+    # SRCNN.add(Activation("sigmoid"))
+
+
+    model = SRCNN
     #dot_img_file = 'Diagram/srcnn-anime_model.png'
     #tf.keras.utils.plot_model(model, to_file=dot_img_file, show_shapes=True, dpi=120)
     #print("Saved model diagram.")
 
     # define optimizer
-    adam = Adam(lr=0.0003)
+    #adam = Adam(lr=0.003) # modified SRCNN
+    adam = Adam(lr=0.0003) # original SRCNN
     
     # compile model
     SRCNN.compile(optimizer=adam, loss='mse', metrics=['mean_squared_error'])
@@ -90,7 +110,7 @@ def train():
     # ----------Training----------
     
     srcnn_model = model()
-    srcnn_model.load_weights("model-checkpoint/srcnn-anime-tanakitint-weights-improvement-00662.hdf5")
+    #srcnn_model.load_weights("model-checkpoint/srcnn-anime-tanakitint-weights-improvement-00662.hdf5")
     print(srcnn_model.summary())
 
     DATA_TRAIN = "h5-dataset/train.h5"
@@ -105,7 +125,7 @@ def train():
     callbacks_list = [checkpoint]
 
     # fit model
-    history = srcnn_model.fit(ILR_train, HR_train, epochs=1838, batch_size=32, callbacks=callbacks_list, validation_data=(ILR_test, HR_test))
+    history = srcnn_model.fit(ILR_train, HR_train, epochs=50, batch_size=32, callbacks=callbacks_list, validation_data=(ILR_test, HR_test))
 
     # save h5 model
     srcnn_model.save("my_model-srcnn-anime-tanakitint.h5")
@@ -138,7 +158,7 @@ def train():
     plt.title('val_loss')
     plt.ylabel('val_loss')
     plt.xlabel('epoch')
-    plt.legend(['train', 'test'], loc='upper left')
+    plt.legend(['train', 'validate'], loc='upper left')
     
     # save fig and show
     plt.savefig('Diagram/srcnn-anime_model_loss.png', dpi=120)
@@ -153,7 +173,7 @@ def train():
     plt.title('val_mean_squared_error')
     plt.ylabel('val_mean_squared_error')
     plt.xlabel('epoch')
-    plt.legend(['train', 'test'], loc='upper left')
+    plt.legend(['train', 'validate'], loc='upper left')
 
     # save fig and show
     plt.savefig('Diagram/srcnn-anime_model_mean_squared_error.png', dpi=120)
