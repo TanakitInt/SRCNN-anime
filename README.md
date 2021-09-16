@@ -24,7 +24,7 @@ Duration : 11 February 2020 - 14 January 2021 (Senior Project) - 8 October 2021 
 
 Public Release date : 14 January 2021  
 
-Paper Release date : TBA  
+Paper Release date : ICITEE 2021 Accepted (TBA)  
 
 <img src="sample/contents/ABOARD_Club_Banner_2021_Colorful-Black.png" width="500">  
 
