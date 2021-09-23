@@ -1,6 +1,8 @@
 # SRCNN-anime
 
-#### A Modified Super-Resolution Convolutional Neural Network (m-SRCNN) build for artwork, anime, and illustration.
+#### A Modified Super-Resolution Convolutional Neural Network (m-SRCNN) build for artwork, anime, and illustration.  
+
+#### ICITEE 2021 Accepted - Enhancement of Anime Imaging Enlargement Using Modified Super-Resolution CNN  
 
 ![Dev Banner](sample/contents/SRCNN-anime_Banner.png)
 
