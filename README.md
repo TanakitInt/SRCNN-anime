@@ -34,6 +34,12 @@ Paper Release date : November 2021 (ICITEE 2021 Accepted)
 Special thanks for Sample images :  
 [Anime Cosplay and Boardgame Club](https://www.facebook.com/AniBoardIT) 
 
+Video Presentation:  
+https://youtu.be/tqI4JqqG0Yk  
+
+PDF Powerpoint Presentation:  
+https://drive.google.com/file/d/1_JO13a_-Afj_UnDLnbtQcHtDuD8_0z3n/view?usp=sharing  
+
 ## I'm interested in this project!  
 
 <img src="sample/contents/Giyuu-Me-No-friend-computer-Meme.png" width="500"> 
