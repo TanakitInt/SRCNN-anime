@@ -22,11 +22,12 @@ Warinthorn Thananporn - [TIVOLI777](https://github.com/TIVOLI777)
 Professor :  
 Asst. Prof. Dr. Kuntpong Woraratpanya - [Google Scholar](https://scholar.google.com/citations?user=q13vj6UAAAAJ&hl=en)
 
-Duration : 11 February 2020 - 14 January 2021 (Senior Project) - 8 October 2021 (Paper)  
+Duration : 11 February 2020 - 14 January 2021 (Senior Project) - 8 September 2021 (Paper)  
 
 Public Release date : 14 January 2021  
 
-Paper Release date : ICITEE 2021 Accepted (TBA)  
+Paper Release date : November 2021 (ICITEE 2021 Accepted)  
+(Insert arxiv Link here)  
 
 <img src="sample/contents/ABOARD_Club_Banner_2021_Colorful-Black.png" width="500">  
 
