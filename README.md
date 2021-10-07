@@ -2,7 +2,7 @@
 
 #### A Modified Super-Resolution Convolutional Neural Network (m-SRCNN) build for artwork, anime, and illustration.  
 
-#### ICITEE 2021 Accepted - Enhancement of Anime Imaging Enlargement Using Modified Super-Resolution CNN  
+#### ICITEE 2021 Accepted in JSCI11 Special Session - Enhancement of Anime Imaging Enlargement Using Modified Super-Resolution CNN
 
 ![Dev Banner](sample/contents/SRCNN-anime_Banner.png)
 
@@ -26,13 +26,13 @@ Duration : 11 February 2020 - 14 January 2021 (Senior Project) - 8 September 202
 
 Public Release date : 14 January 2021  
 
-Paper Release date : November 2021 (ICITEE 2021 Accepted)  
-(Insert arxiv Link here)  
+Paper Release date : 7 October 2021  
+https://arxiv.org/abs/2110.02321  
 
 <img src="sample/contents/ABOARD_Club_Banner_2021_Colorful-Black.png" width="500">  
 
 Special thanks for Sample images :  
-[Anime Cosplay and Boardgame Club](https://www.facebook.com/AniBoardIT) 
+[Anime Cosplay and Boardgame Club](https://www.facebook.com/AniBoardIT)  
 
 Video Presentation:  
 https://youtu.be/tqI4JqqG0Yk  
